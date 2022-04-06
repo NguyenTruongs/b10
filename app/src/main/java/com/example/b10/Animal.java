@@ -5,17 +5,17 @@ public class Animal {
     private String creature_name;
     private String image;
     private String price;
-    private String contet;
+    private String content;
 
     public Animal() {
     }
 
-    public Animal(int id, String creature_name, String image, String price, String contet) {
+    public Animal(int id, String creature_name, String image, String price, String content) {
         this.id = id;
         this.creature_name = creature_name;
         this.image = image;
         this.price = price;
-        this.contet = contet;
+        this.content = content;
     }
 
     public int getId() {
@@ -50,11 +50,11 @@ public class Animal {
         this.price = price;
     }
 
-    public String getContet() {
-        return contet;
+    public String getContent() {
+        return content;
     }
 
-    public void setContet(String contet) {
-        this.contet = contet;
+    public void setContent(String content) {
+        this.content = content;
     }
 }

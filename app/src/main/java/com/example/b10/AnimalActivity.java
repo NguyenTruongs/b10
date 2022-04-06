@@ -3,6 +3,7 @@ package com.example.b10;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,9 +21,11 @@ public class AnimalActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         String name = getIntent().getExtras().getString("animal_creature_name");
-        String gia  = getIntent().getExtras().getString("animal_price");
-        String noidung = getIntent().getExtras().getString("animal_content");
-        String hinh = getIntent().getExtras().getString("animal_image");
+        String price  = getIntent().getExtras().getString("animal_price");
+        String content = getIntent().getExtras().getString("animal_content");
+        String image = getIntent().getExtras().getString("animal_image");
+
+
 
 
         //Nhận dữ liệu
@@ -38,9 +41,9 @@ public class AnimalActivity extends AppCompatActivity {
 
         //thiết lập giá trị cho mỗi chế độ xem
         tv_rating.setText(name);
-        tv_studio.setText(gia);
-        tv_content.setText(noidung);
+        tv_studio.setText(price);
+        tv_content.setText(content);
         //thiết lập hình ảnh bằng cách sử dụng Glide
-        Glide.with(this).load(hinh).into(imageView);
+        Glide.with(this).load(image).into(imageView);
     }
 }

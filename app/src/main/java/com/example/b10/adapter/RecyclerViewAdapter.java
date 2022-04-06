@@ -23,9 +23,9 @@ import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
-    final private Context mContext;
-    final private List<Animal> mData;
-    RequestOptions option;
+     private Context mContext;
+     private List<Animal> mData;
+     RequestOptions option;
 
     public RecyclerViewAdapter(Context mContext, List<Animal> mData){
         this.mContext = mContext;
@@ -48,7 +48,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Intent intent = new Intent(mContext, AnimalActivity.class);
                 intent.putExtra("animal_creature_name",mData.get(viewHolder.getAdapterPosition()).getCreature_name());
                 intent.putExtra("animal_price",mData.get(viewHolder.getAdapterPosition()).getPrice());
-                intent.putExtra("animal_content",mData.get(viewHolder.getAdapterPosition()).getContet());
+                intent.putExtra("animal_content",mData.get(viewHolder.getAdapterPosition()).getContent());
                 intent.putExtra("animal_image",mData.get(viewHolder.getAdapterPosition()).getImage());
 
                 mContext.startActivity(intent);

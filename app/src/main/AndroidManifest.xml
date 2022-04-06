@@ -15,9 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.B10"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".Home_Activity2"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".Home_Activity2"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".AnimalActivity"
             android:exported="false" />
@@ -27,28 +27,28 @@
         <activity
             android:name=".content.HomeActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".sign.LoginActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:exported="false" />-->
 
 <!--        <activity-->
-<!--            android:name=".Home_Activity2"-->
+<!--            android:name=".sign.LoginActivity"-->
 <!--            android:exported="true">-->
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
-
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
 <!--        </activity>-->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 

@@ -26,7 +26,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
-    private EditText name, email, password, RetypePasswrod;
+    private EditText name;
+    private EditText email;
+    private EditText password;
     private Button btn_register;
     private ProgressBar loading;
     private static String URL_REGISTER = "http://192.168.43.118:81/Android_LOGIN_REGISTER/register.php";
@@ -43,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
         name = findViewById(R.id.name);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        RetypePasswrod = findViewById(R.id.retypePassword);
+        EditText retypePasswrod = findViewById(R.id.retypePassword);
         btn_register = findViewById(R.id.btn_register);
 
         btn_register.setOnClickListener(new View.OnClickListener() {

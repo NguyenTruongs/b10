@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         listAnimal = new ArrayList<>();
-        recyclerView = findViewById(R.id.recyclerviewid);
+        recyclerView = findViewById(R.id.recyclerViewId);
         jsonrequest();
     }
 
@@ -54,10 +54,10 @@ public class MainActivity extends AppCompatActivity {
 
                         animal.setCreature_name(jsonObject.getString("creature_name"));
                         animal.setPrice(jsonObject.getString("price"));
-                        animal.setContet(jsonObject.getString("content"));
+                        animal.setContent(jsonObject.getString("content"));
                         animal.setImage(jsonObject.getString("image"));
                         listAnimal.add(animal);
-                        Log.d("json",jsonObject.getString("creature_name"));
+                        Log.d("VVV",jsonObject.getString("creature_name"));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
