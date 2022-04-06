@@ -15,21 +15,28 @@
     <string name="exception">Exception</string>
     <string name="notification">Notification</string>
     <string name="setting">Setting</string>
-    <string name="logout">Logout</string>
     <string name="trues">True</string>
     <string name="other">Other</string>
-    <string name="name">Name</string>
 
 
-    <string name="register">Register</string>
+    <string name="names">Name</string>
+    <string name="appbar_scrolling_view_behavior">Appbar</string>
     <string name="retype_passwrod">Retype_passwrod</string>
-    <string name="email">Email</string>
-
-
     <string name="todo">Todo</string>
     <string name="_0_0">_0_0</string>
-    <string name="studio">Studio</string>
     <string name="welcome">Welcome!</string>
+    <string name="studio">Studio</string>
+    <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="passwords">Password</string>
+    <string name="emails">Email</string>
+    <string name="name">Name</string>
+    <string name="tr_ng_it">Trường IT</string>
+    <string name="online">Online</string>
+    <string name="password">Password</string>
+    <string name="email_hint">email_hint</string>
+    <string name="retype">Retype</string>
 
 
 </resources>

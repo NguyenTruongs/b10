@@ -1,4 +1,4 @@
-package com.example.b10.Register_And_Login;
+package com.example.b10.sign;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText name, email, password, RetypePasswrod;
     private Button btn_register;
     private ProgressBar loading;
-    private static String URL_REGISTER = "http://192.168.1.107:81/Android_LOGIN_REGISTER/register.php";
+    private static String URL_REGISTER = "http://192.168.43.118:81/Android_LOGIN_REGISTER/register.php";
    // private static String URL_REGISTER = "../Android_LOGIN_REGISTER/register.php";
 
 
@@ -43,7 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
         name = findViewById(R.id.name);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        RetypePasswrod = findViewById(R.id.RetypePasswrod);
+        RetypePasswrod = findViewById(R.id.retypePassword);
         btn_register = findViewById(R.id.btn_register);
 
         btn_register.setOnClickListener(new View.OnClickListener() {

@@ -19,14 +19,14 @@ public class AnimalActivity extends AppCompatActivity {
         //ẩn thanh tác vụ mặc định
         getSupportActionBar().hide();
 
-        String name = getIntent().getExtras().getString("animal_tensv");
-        String gia  = getIntent().getExtras().getString("animal_gia");
-        String noidung = getIntent().getExtras().getString("animal_noidung");
-        String hinh = getIntent().getExtras().getString("animal_hinhanh");
+        String name = getIntent().getExtras().getString("animal_creature_name");
+        String gia  = getIntent().getExtras().getString("animal_price");
+        String noidung = getIntent().getExtras().getString("animal_content");
+        String hinh = getIntent().getExtras().getString("animal_image");
 
 
         //Nhận dữ liệu
-        CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsingtoolbar_id);
+        CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsingToolbar_id);
         collapsingToolbarLayout.setTitleEnabled(true);
 
         TextView tv_rating = findViewById(R.id.aa_rating);

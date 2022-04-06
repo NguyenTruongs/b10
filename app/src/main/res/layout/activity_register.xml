@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register_And_Login.RegisterActivity"
+    tools:context=".sign.RegisterActivity"
     android:orientation="vertical"
     android:paddingLeft="30dp"
     android:paddingRight="30dp"
@@ -17,11 +17,12 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:autofillHints="username"
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Name"
+            android:hint="@string/name"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -32,13 +33,14 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:autofillHints="email"
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="@string/email"
-            android:inputType="textPersonName"
+            android:hint="@string/emails"
+            android:inputType="textEmailAddress"
             android:minHeight="48dp"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -49,13 +51,14 @@
         app:passwordToggleEnabled="true">
 
         <EditText
+            android:autofillHints="password"
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="Password"
-            android:inputType="textPersonName"
+            android:hint="@string/password"
+            android:inputType="textVisiblePassword"
             android:minHeight="48dp"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -66,13 +69,14 @@
         app:passwordToggleEnabled="true">
 
         <EditText
-            android:id="@+id/RetypePasswrod"
+            android:autofillHints="retype"
+            android:id="@+id/retypePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="@string/retype_passwrod"
-            android:inputType="textPersonName"
+            android:hint="@string/retype"
+            android:inputType="textPassword"
             android:minHeight="48dp"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>

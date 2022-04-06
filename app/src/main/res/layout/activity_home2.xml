@@ -28,15 +28,16 @@
                 android:layout_height="30dp"
                 android:contentDescription="@string/name"
                 android:src="@drawable/ic_menus"
-                app:tint="@color/Trang" />
+                app:tint="@color/white" />
 
             <ImageView
+                android:contentDescription="@null"
                 android:id="@+id/textTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:text="@string/name"
-                android:textColor="@color/Trang"
+                android:text="@string/names"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 

@@ -7,16 +7,16 @@
     tools:context=".AnimalActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:background="#20B1F3"
+        android:background="@color/xanh"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:id="@+id/appbarlayout_id">
+        android:id="@+id/appBarLayout_id">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/collapsingtoolbar_id"
+            android:id="@+id/collapsingToolbar_id"
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
             app:title="Anime Tile"
             app:contentScrim="?attr/colorPrimary"
@@ -41,6 +41,7 @@
                 >
 
                 <ImageView
+                    android:contentDescription="@null"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/loading_shape"
@@ -58,20 +59,22 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/rating_background"
-                        android:text="0.0"
+                        android:text="@string/_0_0"
                         android:textColor="#fff"
                         android:textSize="15sp"
                         android:textStyle="bold"
-                        android:drawableLeft="@drawable/ic_baseline_star_24"
-                        android:layout_marginRight="5dp"
+                        app:drawableLeftCompat="@drawable/ic_baseline_star_24"
+                        android:layout_marginEnd="5dp"
                         />
 
                     <TextView
+                        android:id="@+id/aa_studio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Studio"
                         android:layout_marginTop="5dp"
-                        android:id="@+id/aa_studio"/>
+                        android:text="@string/studio"
+                        android:textColor="#4E342E"
+                        tools:ignore="TextContrastCheck" />
 
                 </LinearLayout>
 

@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register_And_Login.LoginActivity">
+    tools:context=".sign.LoginActivity">
 
     <ImageView
         android:id="@+id/avatar"
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/anh" />
+        android:src="@drawable/anh"
+        android:contentDescription="@null" />
 
     <com.google.android.material.textfield.TextInputLayout
        android:id="@+id/layoutEmail"
@@ -21,13 +22,15 @@
         android:layout_marginTop="30dp">
 
         <EditText
+            android:autofillHints="username"
             android:id="@+id/Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:hint="Email"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            android:hint="@string/emails"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+             />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -41,10 +44,11 @@
             android:id="@+id/Password"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:hint="Password"
+            android:hint="@string/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"/>
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+            android:importantForAutofill="no" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar
@@ -64,7 +68,7 @@
         android:layout_marginTop="45dp"
         android:layout_marginRight="100dp"
         android:background="@color/hong"
-        android:text="Login"
+        android:text="@string/login"
         android:textColor="@color/den" />
 
     <Button
@@ -76,7 +80,7 @@
         android:layout_marginTop="45dp"
         android:layout_marginRight="100dp"
         android:background="@color/hong"
-        android:text="Register"
+        android:text="@string/register"
         android:textColor="@color/den" />
 
 

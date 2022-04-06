@@ -21,21 +21,6 @@
         android:orientation="vertical"
         android:layout_margin="8dp">
 
-        <!--        <TextView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:id="@+id/anime_name"-->
-        <!--            android:text="Anime Title"-->
-        <!--            android:textStyle="bold"-->
-        <!--            android:textSize="18sp"/>-->
-
-        <!--        <TextView-->
-        <!--            android:layout_marginTop="5dp"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="Category"-->
-        <!--            android:id="@+id/categorie"/>-->
-
         <TextView
             android:id="@+id/rating"
             android:layout_width="180dp"

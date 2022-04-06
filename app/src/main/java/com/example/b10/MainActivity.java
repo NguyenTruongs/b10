@@ -12,7 +12,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.b10.Adapter.RecyclerViewAdapter;
+import com.example.b10.adapter.RecyclerViewAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,36 +23,25 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String JSON_URL_ANIMAL = "http://192.168.1.107:81/Android_LOGIN_REGISTER/Animal_Content.php";
+    private final String JSON_URL_ANIMAL = "http://192.168.43.118:81/Android_LOGIN_REGISTER/Animal_Content.php";
 
     private JsonArrayRequest request;
     private RequestQueue requestQueue;
-    private List<Animal> lstAnimal;
+    private List<Animal> listAnimal;
     private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        lstAnimal = new ArrayList<>();
+        listAnimal = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerviewid);
         jsonrequest();
-        //  getLocalIpAddress();
-
-        //Context context = requireContext().getApplicationContext();
-//        WifiManager wm = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
-//        Toast.makeText(MainActivity.this, , Toast.LENGTH_SHORT).show();
-
     }
 
     // Json request : yêu cầu json
     private void jsonrequest() {
 
-        // JsonArrayRequest request = new JsonArrayRequest(JSON_URL, new Response.Listener<JSONArray>()){
-        //
-        // }
         request = new JsonArrayRequest(JSON_URL_ANIMAL, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -63,20 +52,17 @@ public class MainActivity extends AppCompatActivity {
                         jsonObject = response.getJSONObject(i);
                         Animal animal = new Animal();
 
-                        //         anime.setId(jsonObject.getInt("id"));
-                        animal.setTensv(jsonObject.getString("tensv"));
-                        animal.setGia(jsonObject.getString("gia"));
-                        animal.setNoidung(jsonObject.getString("noidung"));
-                        animal.setHinh(jsonObject.getString("hinhanh"));
-                        lstAnimal.add(animal);
-
-                        Log.d("vvv",jsonObject.getString("tensv"));
+                        animal.setCreature_name(jsonObject.getString("creature_name"));
+                        animal.setPrice(jsonObject.getString("price"));
+                        animal.setContet(jsonObject.getString("content"));
+                        animal.setImage(jsonObject.getString("image"));
+                        listAnimal.add(animal);
+                        Log.d("json",jsonObject.getString("creature_name"));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
-
-                setuprecyclerview(lstAnimal);
+                setupRecyclerview(listAnimal);
             }
         }, new Response.ErrorListener() {
             @Override
@@ -84,37 +70,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
         requestQueue = Volley.newRequestQueue(MainActivity.this);
         requestQueue.add(request);
-
-
     }
 
     // set up recyclerview : thiết lập chế độ xem lại
-    private void setuprecyclerview(List<Animal> lstAnimal) {
-        RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this,lstAnimal);
+    private void setupRecyclerview(List<Animal> listAnimal) {
+        RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this,listAnimal);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         recyclerView.setAdapter(myadapter);
     }
 
-//    public String getLocalIpAddress() {
-//        try {
-//            for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
-//                NetworkInterface intf = en.nextElement();
-//                for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
-//                    InetAddress inetAddress = enumIpAddr.nextElement();
-//                    if (!inetAddress.isLoopbackAddress()) {
-//                        String ip = Formatter.formatIpAddress(inetAddress.hashCode());
-//                        Log.i("TAG", "***** IP="+ ip);
-//                        return ip;
-//                    }
-//                }
-//            }
-//        } catch (SocketException ex) {
-//            Log.e("TAG", ex.toString());
-//        }
-//        return null;
-//    }
+
 }

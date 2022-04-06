@@ -2,20 +2,20 @@ package com.example.b10;
 
 public class Animal {
     private int id;
-    private String tensv;
-    private String hinh;
-    private String gia;
-    private String noidung;
+    private String creature_name;
+    private String image;
+    private String price;
+    private String contet;
 
     public Animal() {
     }
 
-    public Animal(int id, String tensv, String hinh, String gia, String noidung) {
+    public Animal(int id, String creature_name, String image, String price, String contet) {
         this.id = id;
-        this.tensv = tensv;
-        this.hinh = hinh;
-        this.gia = gia;
-        this.noidung = noidung;
+        this.creature_name = creature_name;
+        this.image = image;
+        this.price = price;
+        this.contet = contet;
     }
 
     public int getId() {
@@ -26,35 +26,35 @@ public class Animal {
         this.id = id;
     }
 
-    public String getTensv() {
-        return tensv;
+    public String getCreature_name() {
+        return creature_name;
     }
 
-    public void setTensv(String tensv) {
-        this.tensv = tensv;
+    public void setCreature_name(String creature_name) {
+        this.creature_name = creature_name;
     }
 
-    public String getHinh() {
-        return hinh;
+    public String getImage() {
+        return image;
     }
 
-    public void setHinh(String hinh) {
-        this.hinh = hinh;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    public String getGia() {
-        return gia;
+    public String getPrice() {
+        return price;
     }
 
-    public void setGia(String gia) {
-        this.gia = gia;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
-    public String getNoidung() {
-        return noidung;
+    public String getContet() {
+        return contet;
     }
 
-    public void setNoidung(String noidung) {
-        this.noidung = noidung;
+    public void setContet(String contet) {
+        this.contet = contet;
     }
 }

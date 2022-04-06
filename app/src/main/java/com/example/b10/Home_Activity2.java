@@ -9,6 +9,9 @@ import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 
+/**
+ *
+ */
 public class Home_Activity2 extends AppCompatActivity {
 
     @Override
